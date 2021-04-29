@@ -6,7 +6,7 @@ import Body from './Body';
 import Footer from './Footer';
 import Header from './Header';
 
-function Mini(props) {
+function SubPopup(props) {
   const { data, filterKey, hidePopup, className } = props;
   const appliedFilters = useSelector(state => state.filters.appliedFilters);
   const [selectedFilters, setSelectedFilters] = useState([]);
@@ -37,4 +37,4 @@ function Mini(props) {
   );
 }
 
-export default Mini;
+export default SubPopup;

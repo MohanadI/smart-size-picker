@@ -22,6 +22,7 @@ function List(props) {
     } else {
       setAllowedList(["all"]);
     }
+    console.log("updated");
   }, [isMobile]);
 
   const listItems = Object.keys(items).map(function (key) {

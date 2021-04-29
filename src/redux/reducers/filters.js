@@ -1,4 +1,4 @@
-import { ADD_FILTER, REMOVE_ITEM } from "../actionTypes";
+import { ADD_FILTER, REMOVE_ITEM, CLEAR_ALL } from "../actionTypes";
 
 const initialState = {
   appliedFilters: []
@@ -22,18 +22,25 @@ export default function filters(state = initialState, action) {
     }
     case REMOVE_ITEM: {
       let item = action.payload.item;
-      let appliedFilters = state.appliedFilters.slice();
+      let appliedFilters = [...state.appliedFilters];
 
       let parent = appliedFilters.filter(v => v.name === item.parent);
       let res = parent[0].items.filter(v => v !== item.item)
 
       parent[0].items = res;
       appliedFilters = appliedFilters.filter(el => el.name !== item.parent);
-      appliedFilters.push(parent[0]);
+      if (res.length > 0) appliedFilters.push(parent[0]);
       return {
         ...state,
         appliedFilters
       };
+    }
+    case CLEAR_ALL: {
+      let appliedFilters = [];
+      return {
+        ...state,
+        appliedFilters
+      }
     }
     default: {
       return state;

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Button from '../Button';
 import Header from '../Popup/Header';
-import Mini from '../Popup/Mini';
+import SubPopup from '../Popup/SubPopup';
 
 import './Accordion.css';
 
@@ -10,14 +10,14 @@ function Accordion(props) {
   const [current, setCurrent] = useState('');
 
   const dataToShow = Object.keys(data).map(function (key) {
-    return <div className="Accordion-item">
+    return <div key={key} className="Accordion-item">
       <h3>
         {key}
         {current === key ?
           <Button text="-" onClick={() => setCurrent('')} /> :
           <Button text="+" onClick={() => setCurrent(key)} />}
       </h3>
-      {current === key && <Mini key={key}
+      {current === key && <SubPopup key={key}
         data={data[key]}
         filterKey={key}
         className='Accordion-popup'
