@@ -29,12 +29,12 @@ It correctly bundles React in production mode and optimizes the build for the be
 The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
 
-### Files Structure
+### `Files Structure`
 
-src
--> components <!-- Shared components -->
--> containers <!-- These folders are the representation of the main logic in the app -->
--> images <!-- assets folder -->
--> redux <!-- Redux and store for the app -->
--> utils <!-- Here you can find general functions and tools -->
--> index.js <!-- Boot file -->
+src .\
+-> components `Shared components` .\
+-> containers `These folders are the representation of the main logic in the app` .\
+-> images `assets folder`.\
+-> redux `Redux and store for the app`.\
+-> utils `Here you can find general functions and tools`.\
+-> index.js `Boot file`.\
