@@ -1,0 +1,12 @@
+.App-logo {
+  height: 7vmin;
+  pointer-events: none;
+  vertical-align: middle;
+  margin-right: 7px;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}

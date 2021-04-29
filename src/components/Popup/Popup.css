@@ -1,0 +1,45 @@
+.Filter-Popup {
+  position: absolute;
+  width: 350px;
+  border: 1px solid #d6d6d6;
+  background-color: white;
+  top: 60px;
+  left: 0;
+}
+.Popup-Body {
+  min-height: 150px;
+}
+.Popup-Body .selected {
+  background: #2d2d2d;
+  color: white;
+}
+.Popup-Body button {
+  background: #f0f0f0;
+  margin: 4px;
+  border: 1px solid #f2f2f2;
+  font-size: 14px;
+  padding: 5px 10px;
+}
+.Popup-Footer {
+  padding: 5px;
+  display: flow-root;
+}
+.Popup-Footer .Apply-Btn {
+  float: right;
+  padding: 7px 25px;
+  border: 1px solid #ccc;
+}
+.Cancel-Btn {
+  padding: 7px 25px;
+  border: 1px solid #ccc;
+}
+.Arrow-Up {
+  position: absolute;
+  top: -19px;
+  left: 35px;
+}
+@media only screen and (max-width: 600px) {
+  .Filter-Popup {
+    width: 100%;
+  }
+}

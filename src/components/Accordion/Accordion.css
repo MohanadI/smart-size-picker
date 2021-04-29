@@ -1,0 +1,13 @@
+.Accordion-item {
+  padding: 10px;
+}
+h3 {
+  margin: 0;
+}
+h3 button {
+  border: 0;
+  float: right;
+  font-size: 18px;
+  padding: 0;
+  background: none;
+}
